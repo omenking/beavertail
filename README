@@ -1,3 +1,5 @@
+BeaverTail reads the log file of a Ruby on Rails and displays the entries on a web page.
+
 Steps to install:
   $ cd ~/Sites
   $ git clone git@github.com:tye/beavertail.git
@@ -14,7 +16,8 @@ Login with:
 
 Misc Features:
 
-  Controller names and filenames in backtraces use txmt:// links so you can open the files in TextMate
+  - Controller names and filenames in backtraces use txmt:// links so you can open the files in TextMate
+  - When the window loses focus it places a red marker in the list of log entries.
 
 Hotkeys:
 
@@ -28,3 +31,8 @@ right     Expand selected entry
 left      Collapse selected entry
 tab       Select next entry and expand it
 backspace Select previous entry and expand it
+
+Screenshots:
+
+http://i.imgur.com/YPRXG.png
+http://i.imgur.com/ZQjJa.png
