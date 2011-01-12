@@ -6,6 +6,36 @@ Entry = {
         entry = entry.next()
       entry.addClassName('selected')
     }
+  },
+  add: function(entries) {
+    new_count = 0
+    update_count = 0
+
+    if (Log.frozen)
+      return
+      
+    while (entry = entries.shift()) {
+        entry_dom = $$('.entry[hash='+entry.hash+']')
+        if (entry_dom.length == 0) {
+          $('entries').insert({
+            top: entry.html })
+          Log.insert_controller_action(entry.controller,entry.action)
+          new_count++
+        } else if (entry_dom[0].readAttribute('content_hash') != entry.content_hash) {
+          is_expanded = entry_dom[0].hasClassName('expanded')
+          entry_dom[0].replace(entry.html)
+          if (is_expanded)
+            entry_dom[0].addClassName('expanded selected')
+          update_count++
+        }
+      }
+    
+    if ($$('.selected').length == 0) { Entry.initialize() }
+    
+    if (new_count > 0)
+       Log.scroll_to_marker(new_count)
+      
+    Event.addBehavior.reload()
   }
 }
 
