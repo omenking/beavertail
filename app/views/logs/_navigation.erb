@@ -1,0 +1,19 @@
+<%
+
+render_tabnav :log_navigation do 
+  if current_user.admin?
+    add_tab do |t|
+      t.named t('.list')
+      t.links_to logs_path
+      t.highlights_on 'logs#index'
+    end
+  
+    add_tab do |t|
+      t.named t('.new')
+      t.links_to new_log_path
+      t.highlights_on 'logs#new'
+    end
+  end
+end
+
+%>

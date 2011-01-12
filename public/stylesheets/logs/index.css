@@ -1,0 +1,26 @@
+.log .name {
+  float: left;
+  width: 100px; }
+.log .mtime {
+  float: left;
+  width: 200px; }
+
+.logs {
+  padding: 0 10px; }
+  .logs .log {
+    padding: 5px;
+    background: white;
+    margin-bottom: 1px; }
+    .logs .log .doesnt_exist {
+      font-weight: bold; }
+
+.list_header {
+  padding-left: 15px; }
+  .list_header .mtime {
+    text-decoration: underline;
+    width: 200px;
+    float: left; }
+  .list_header .name {
+    text-decoration: underline;
+    float: left;
+    width: 100px; }

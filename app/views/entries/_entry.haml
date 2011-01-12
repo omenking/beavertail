@@ -1,0 +1,11 @@
+.entry{entry_attrs(entry)}
+  .head     
+    = entry_errors_or_speed(entry)
+    = entry_method(entry)
+    = entry_address(entry)
+    = entry_time(entry)
+    = request_name(entry)
+  .body
+    = entry_params(entry)
+    = entry_content(entry)
+  .clear

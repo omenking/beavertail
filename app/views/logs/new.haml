@@ -1,0 +1,7 @@
+-content_for :column do
+  = log_navigation
+
+%h2 New Log
+- log_form_for(@log) do |f|
+  = log_fields(f)
+  = app_submit(f)

@@ -1,0 +1,41 @@
+.users
+  :width 100%
+  .users_header
+    :border-bottom 1px solid rgb(0,0,0)
+  .name, .email, .role, .actions
+    :float left
+    :padding 5px
+  .name
+    :width 30%
+  .email
+    :width 30%
+  .role
+    :width 20%
+    .loading
+      :float left
+      :display none
+      &.display
+        :display block
+  .user
+    :border-bottom 1px dashed rgb(100,100,100)
+    &.droppable
+      :background-color rgb(255,255,200)
+    .logs
+      :padding 0 5px 5px 5px
+      span
+        :font-size 11px
+        :color rgb(100,100,100)
+      span.label
+        :font-weight bold
+
+.user_logs
+  :padding 5px
+  .user_log
+    :cursor pointer
+    :margin-bottom 3px
+    :background rgb(255,255,255)
+    :padding 2px 3px
+    .name, .drag
+      :float left
+    .drag
+      :margin-right 5px

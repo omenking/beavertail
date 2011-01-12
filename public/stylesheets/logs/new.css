@@ -1,0 +1,7 @@
+.new_logs .log_form {
+  margin-top: 5px;
+  padding: 5px;
+  background: white;
+  width: 400px; }
+  .new_logs .log_form .text_field input {
+    width: 392px; }

@@ -1,0 +1,5 @@
+%h2= t('.title')
+
+- user_form_for(@user) do |f|
+  = user_fields(f)
+  = app_submit(f)

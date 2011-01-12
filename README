@@ -1,0 +1,30 @@
+Steps to install:
+  $ cd ~/Sites
+  $ git clone git@github.com:tye/beavertail.git
+  $ gem install bundle
+  $ bundle install
+  $ rake db:create
+  $ rake db:auto:migrate
+  $ rake db:seed
+  $ rails s
+
+Login with:
+  User: admin@localhost.com
+  Password: admin
+
+Misc Features:
+
+  Controller names and filenames in backtraces use txmt:// links so you can open the files in TextMate
+
+Hotkeys:
+
+Esc       Clears search, collapses all entries and removes focus from the search field
+p         Toggles ajax pulling
+b         Toggle application/full backtraces
+f         Focus search field
+h         Hide the currently selected entry
+up/down   Move selection up/down list of log entries
+right     Expand selected entry
+left      Collapse selected entry
+tab       Select next entry and expand it
+backspace Select previous entry and expand it

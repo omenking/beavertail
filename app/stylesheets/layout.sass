@@ -1,0 +1,55 @@
+.content_wrap
+  :float left
+  :width 100%
+  :margin-top 41px
+.content
+  :position relative
+  :margin-left 200px
+  :z-index 1
+  :background rgb(255,255,255)
+  :padding 5px
+.column
+  :position fixed
+    :top 0px
+  :width 200px   
+  :padding-top 40px
+.header  
+  :width 100%
+  :background rgb(210,210,210)
+  :border-bottom solid 1px rgb(140,140,140)
+  :z-index 10
+  :position fixed     
+  :height 40px
+  
+div, span
+  :font-family sans-serif
+
+.clear
+  :clear both
+
+.search
+  :float left
+  input
+    :float left
+    :border solid 1px rgb(120,120,120)
+    :border-right none
+    :font-size 14px
+    :width 155px
+    :padding 3px
+    :margin 0px
+    &:focus
+      :outline 0 none
+  .search_button, .search_loader      
+    :float left
+    :display block
+    :width 23px
+    :height 23px
+    :background rgb(255,255,255) url(../images/search.png) no-repeat center
+    :border solid 1px rgb(120,120,120)
+    :border-left none
+  .search_loader
+    :display none
+    :background rgb(255,255,255) url(../images/search_loader.gif) no-repeat center  
+.column
+  h1
+    :font-weight bold

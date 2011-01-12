@@ -1,0 +1,17 @@
+<%
+
+render_tabnav :recent_nav do
+  x = 1
+  for log in current_user.logs.all(:limit => 6)
+    add_tab do |t|
+      t.named log.name
+      t.links_to log_path(log)
+      t.log = log
+      t.li_class = "recent_log_#{x}"
+      t.highlights_on lambda{|action,tab| action == 'logs#show' && tab.log == @log}
+    end
+    x += 1
+  end
+end
+
+%>

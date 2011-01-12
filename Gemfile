@@ -1,0 +1,7 @@
+source 'http://rubygems.org'
+gem 'rails', '3.0.1'
+# gem 'mongrel', '1.1.5'
+gem 'haml'
+gem 'mysql2'
+gem 'sprockets'
+gem 'memcache-client'

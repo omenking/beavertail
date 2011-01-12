@@ -1,0 +1,9 @@
+= f.error_messages
+.first_last_name
+  = app_text_field(f,:first_name)
+  = app_text_field(f,:last_name)
+  .clear
+
+= app_text_field(f,:email)
+= app_text_field(f,:password,:password_field)
+= app_text_field(f,:password_confirmation,:password_field)

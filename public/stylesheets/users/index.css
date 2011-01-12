@@ -1,0 +1,41 @@
+.users {
+  width: 100%; }
+  .users .users_header {
+    border-bottom: 1px solid black; }
+  .users .name, .users .email, .users .role, .users .actions {
+    float: left;
+    padding: 5px; }
+  .users .name {
+    width: 30%; }
+  .users .email {
+    width: 30%; }
+  .users .role {
+    width: 20%; }
+    .users .role .loading {
+      float: left;
+      display: none; }
+      .users .role .loading.display {
+        display: block; }
+  .users .user {
+    border-bottom: 1px dashed #646464; }
+    .users .user.droppable {
+      background-color: #ffffc8; }
+    .users .user .logs {
+      padding: 0 5px 5px 5px; }
+      .users .user .logs span {
+        font-size: 11px;
+        color: #646464; }
+      .users .user .logs span.label {
+        font-weight: bold; }
+
+.user_logs {
+  padding: 5px; }
+  .user_logs .user_log {
+    cursor: pointer;
+    margin-bottom: 3px;
+    background: white;
+    padding: 2px 3px; }
+    .user_logs .user_log .name, .user_logs .user_log .drag {
+      float: left; }
+    .user_logs .user_log .drag {
+      margin-right: 5px; }

@@ -1,0 +1,7 @@
+.user{user_attrs(user)}
+  .name= "#{user.first_name} #{user.last_name}"
+  .email= user.email
+  = user_role_select(user)
+  .actions= delete_user_link(user)
+  .clear
+  = user_logs(user)

@@ -1,0 +1,97 @@
+body.show_logs
+  .content
+    :padding 0
+
+.entries     
+  .entry
+    :margin-bottom 1px
+    .head    
+      img.error
+        :float right
+      .speed
+        :float right
+        :padding-right 5px
+        :width 55px
+        :text-align right
+      .address
+        :float right
+        :margin-right 5px
+      .method
+        :float right
+        :margin-right 5px
+        :width 40px
+      :cursor pointer
+      :padding 5px
+      :padding-left 18px
+      :background rgb(245,245,245) url('../images/entry_collapse.png') no-repeat 5px 10px
+      &:hover
+        :background-color rgb(215,215,235)
+    .body 
+      :display none
+      :clear both
+      .search_match  
+        :color black
+      .entry_content      
+        :background rgb(0,0,0)      
+        :padding 10px 
+        div, span
+          :font-family monospace
+          :color white
+          &.search_match
+            :color black
+          
+      .parameters                   
+        :padding 5px 0px
+        :background rgb(240,240,250)
+        :font-size 14px
+        :font-family Helvetica, arial           
+        :border-bottom 1px solid rgb(100,100,100)
+        .param
+          :clear both
+          div
+            :color rgb(0,0,0)
+          .name
+            :width 120px
+            :float left
+            :margin-right 5px
+            :text-align right
+          .value
+            :float left
+      a.textmate_link
+        :text-decoration none
+        :color rgb(100,100,255)
+        &:hover
+          :color rgb(255,255,100)
+        
+      .normal 
+      .backtrace
+      .error
+        :color red
+        span.error
+          :color red
+      .render
+        .filename
+          :text-decoration underline
+      .sql
+        :color rgb(100,100,255)        
+        .query
+          :color rgb(100,100,255)
+          :font-weight bold
+  .selected                     
+    .head
+      :background-color rgb(255,255,200)
+  .has_no_search_results
+    :display none
+  .expanded     
+    .head  
+      :background-image url('../images/entry_expand.png')
+    .body
+      :display block             
+.marker
+  :height 2px
+  :background rgb(255,0,0)
+  :margin-bottom 1px
+
+.search_match
+  :background-color yellow
+  :color black

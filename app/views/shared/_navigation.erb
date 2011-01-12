@@ -1,0 +1,31 @@
+<%
+render_tabnav :navigation do 
+  if logged_in?
+    add_tab do |t|
+      t.named t('.logs')
+      t.links_to logs_path
+      t.highlights_on proc{|action,tab| ['logs#index','logs#new','logs#create'].include?(action)}
+    end
+  
+    add_tab do |t|
+      t.named t('.users')
+      t.links_to users_path
+      t.highlights_on :controller => 'users'
+    end
+  
+    add_tab do |t|
+      t.named t('.logout')
+      t.links_to '#'
+      t.highlights_on 'sessions#destroy'
+      t.li_class = 'right'
+    end
+  
+    add_tab do |t|
+      t.named t('.account')
+      t.links_to user_path
+      t.highlights_on 'users#edit'
+      t.li_class = 'right'
+    end
+  end
+end
+%>

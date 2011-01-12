@@ -1,0 +1,28 @@
+page << "if (!Log.frozen) {"
+page.assign('new_count',0)
+page.assign('update_count',0)
+for entry in @log.entries
+   page << "if ($$('.entry[hash=#{entry.hash}]').length == 0) {"
+      page.insert_entry(entry)
+      page << "Log.insert_controller_action('#{entry.controller_name}','#{entry.action_name}')"
+      page << "new_count++"
+      page << "Sound.play('/sounds/error.mp3')" if @log.entries.last == entry && entry.has_errors?
+   page << "} else if ($$('.entry[hash=#{entry.hash}]')[0].readAttribute('content_hash') != '#{entry.content_hash}'){"
+      page << "update_count++"
+      page << "is_expanded = $$('.entry[hash=#{entry.hash}]')[0].hasClassName('expanded')"
+      page.replace_entry(entry)
+      page << "if (is_expanded) { $$('.entry[hash=#{entry.hash}]')[0].addClassName('expanded selected') }"
+   page.en   
+end
+
+page << <<ENDD
+if (new_count > 0)
+   Log.scroll_to_marker(new_count)
+if ($$('.selected').length == 0) { Entry.initialize() }
+if (new_count > 0 || update_count > 0)
+   Search.update(false)
+App.set_title()
+
+ENDD
+page.reload_javascript_events
+page.en # if !Log.frozen

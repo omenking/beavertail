@@ -1,0 +1,4 @@
+tmp/*
+db/*.sqlite3
+log/*
+public/stylesheets/*.css

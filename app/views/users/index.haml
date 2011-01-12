@@ -1,0 +1,7 @@
+- content_for :column do
+  - if current_user.admin?
+    = list_user_logs(@logs)
+    :javascript
+      User.drag_drop()
+    
+= list_users(@users)
